@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - Matemáticas Espaciales</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilos.css') }}">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- jQuery library -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ApexCharts -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+</head>
+
+<body>
+  <div id="fondo1" class="p-4">
+    <h1 id="Titulo1">Matemáticas Espaciales</h1>
+    <img id="fondo2" src="{{ url_for('static', filename='images/EscudoEscuela.png') }}" width="300" height="100" class="imagen-derecha">
+  </div>
+
+  <div id="wrapper">
+    <div class="content-area">
+      <div class="container-fluid">
+
+        <div class="main">
+
+          <div class="row mt-4">
+            <div class="col-sm-10"></div>
+            <div class="col-sm-10">
+              <a href="http://rodr1g0fernand0.pythonanywhere.com/crear_jugador">
+                <button class="btn btn-info">Crear Jugador</button>
+              </a>
+              <a href="http://rodr1g0fernand0.pythonanywhere.com/leer_jugador">
+                <button class="btn btn-info">Leer Jugador</button>
+              </a>
+              <a href="http://rodr1g0fernand0.pythonanywhere.com/actualizar_jugador">
+                <button class="btn btn-info">Actualizar Jugador</button>
+              </a>
+              <a href="http://rodr1g0fernand0.pythonanywhere.com/borrar_jugador">
+                <button class="btn btn-info">Borrar Jugador</button>
+              </a>
+            </div>
+          </div>
+
+          <div class="row sparkboxes mt-4">
+            <div class="col-md-6">
+              <div class="box shadow">
+                <div id="donut"></div>
+              </div>
+            </div>
+
+
+
+
+            <div class="col-md-6">
+              <div class="box box4">
+                <div class="details">
+                  <h5>Promedio de progreso general</h5>
+                  <div class="mt-4">
+                    <div id="progreso"></div>
+                  </div>
+                </div>
+                <div id="spark4"></div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="row mt-4">
+            <div class="col-md-5">
+              <div class="box columnbox mt-4">
+                <div id="columnchart"></div>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="box columnbox mt-4">
+                    <div id="topniños"></div>
+                  </div>
+                </div>
+
+
+                <div class="col-md-6">
+                  <div class="box columnbox mt-4">
+                    <div id="topniñas"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-4">
+              <div class="box columnbox mt-4">
+                <div id="peores"></div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="box columnbox mt-4">
+                    <div id="peoresniños"></div>
+                  </div>
+                </div>
+
+
+                <div class="col-md-6">
+                  <div class="box columnbox mt-4">
+                    <div id="peoresniñas"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-4">
+              <div class="box columnbox mt-4">
+                <div id="exito_fallo_1"></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box columnbox mt-4">
+                <div id="exito_fallo_2"></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="box columnbox mt-4">
+                <div id="exito_fallo_3"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class = "row mt-4">
+            <div class = "col-md-12">
+              <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Matemáticas Espaciales</span> por <span property="cc:attributionName">Diego Aguilar Torres, Manuel Antonio Morales González, David Alonso Chang Ortega, Rodrigo Fernando Rivera Olea</span> está licenciado bajo <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="{{ url_for('static', filename='js/SistemaWeb.js') }}"></script>
+
+</body>
+
+</html>
