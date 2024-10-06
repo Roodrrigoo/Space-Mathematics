@@ -30,6 +30,7 @@ This project not only seeks to improve children's math skills, but also to foste
 
 For the creation of the website, we used modern web technologies, including JavaScript, HTML, and CSS. These tools allowed us to design an intuitive and responsive interface, facilitating user interaction. We also implemented the use of APIs to integrate different functionalities and improve the user experience on the site.
 
+# WEB SITE
 
 ![image alt](https://github.com/Roodrrigoo/Space-Mathematics/blob/main/File/matematicas%20espaciales%20sitio%20inicial%20.png?raw=true
 )
